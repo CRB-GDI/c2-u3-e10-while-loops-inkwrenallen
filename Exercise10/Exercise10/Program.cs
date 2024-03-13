@@ -20,25 +20,25 @@
                 Console.WriteLine("please make a selection:");
                 int userChoice = int.Parse(Console.ReadLine());
             //while loop
-            while (userChoice == 4)
+            while (userChoice != 4)
             {
-               
+
                 //application printing an appropriate response confirming their choice
                 if (userChoice == 1)
                 {
                     Console.WriteLine("Loading New Game ...");
                 }
-                if (userChoice == 2)
+                else if (userChoice == 2)
                 {
                     Console.WriteLine("Loading Game ...");
                 }
-                if (userChoice == 3)
+                else if (userChoice == 3)
                 {
                     Console.WriteLine("Loading Options ...");
                 }
-                if (userChoice == 4)
+                else
                 {
-                    Console.WriteLine("Quiting game ...");
+                    Console.WriteLine("Please Enter Valid Selection");
                 }
                 Console.WriteLine("**************");
                 Console.WriteLine("");
@@ -49,6 +49,13 @@
                 Console.WriteLine("4 - Quit");
                 Console.WriteLine("**************");
                 Console.WriteLine("please make a selection:");
+                userChoice = int.Parse(Console.ReadLine());
+
+            }
+
+            if (userChoice == 4)
+            {
+                Console.WriteLine("Quiting Game ...");
             }
         }
     }
